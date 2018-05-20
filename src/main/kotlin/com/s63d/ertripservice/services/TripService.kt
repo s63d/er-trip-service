@@ -13,4 +13,6 @@ class TripService(private val tripRepository: TripRepository) {
         return tripRepository.save(trip)
     }
 
+    fun byCarTracker(trackerId: String) = tripRepository.findByCarTrackerId(trackerId)
+
 }
