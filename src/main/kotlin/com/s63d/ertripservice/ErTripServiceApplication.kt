@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 
 @SpringBootApplication
 @EnableFeignClients
-class ErVehicleServiceApplication
+class ErTripServiceApplication
 
 fun main(args: Array<String>) {
-    runApplication<ErVehicleServiceApplication>(*args)
+    runApplication<ErTripServiceApplication>(*args)
 }
