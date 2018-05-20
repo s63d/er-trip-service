@@ -12,4 +12,7 @@ class TripController(private val tripService: TripService) {
 
     @GetMapping
     fun getByCarTracker(@RequestParam trackerId: String) = tripService.byCarTracker(trackerId)
+
+    @GetMapping("{id}")
+    fun getById(@PathVariable id: Long) = tripService.byId(id)
 }

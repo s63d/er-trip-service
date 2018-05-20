@@ -15,4 +15,6 @@ class TripService(private val tripRepository: TripRepository) {
 
     fun byCarTracker(trackerId: String) = tripRepository.findByCarTrackerId(trackerId)
 
+    fun byId(id: Long) = tripRepository.findById(id).orElseThrow { Exception("Invalid trip id") } // TODO response status
+
 }
