@@ -1,8 +1,6 @@
 package com.s63d.ertripservice.domain
 
-import java.util.*
-import javax.persistence.Entity
-import javax.persistence.Id
+import javax.persistence.Embeddable
 
-@Entity
-data class CarTracker(@Id  val id: String = UUID.randomUUID().toString())
+@Embeddable
+data class CarTracker(val id: String)
