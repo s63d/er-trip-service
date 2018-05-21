@@ -1,4 +1,4 @@
-package com.s63d.ervehicleservice.config
+package com.s63d.ertripservice.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.CorsRegistry
