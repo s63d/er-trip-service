@@ -7,9 +7,10 @@ import javax.persistence.Id
 import kotlin.math.roundToInt
 import it.rambow.master.javautils.Trackpoint
 import it.rambow.master.javautils.PolylineEncoder.createEncodings
+import javax.persistence.GenerationType
 
 @Entity
-data class Location(val lat: Double, val lon: Double, @Id @GeneratedValue val id: Long = 0)
+data class Location(val lat: Double, val lon: Double, @Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long = 0)
 
 fun List<Location>.toPolyline() : String {
 
