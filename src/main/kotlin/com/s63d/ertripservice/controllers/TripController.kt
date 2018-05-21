@@ -13,9 +13,10 @@ class TripController(private val tripService: TripService) {
     @GetMapping
     fun getByCarTracker(@RequestParam trackerId: String) = tripService.byCarTracker(trackerId)
 
-    @GetMapping("{id:\\d+}")
-    fun getById(@PathVariable id: Long) = tripService.byId(id)
-
     @GetMapping("{id}")
-    fun getByLicense(@PathVariable id: String) = tripService.byCarId(id)
+    fun getByLicense(@PathVariable id: String) =
+            if(id.toLongOrNull() != null)
+                tripService.byId(id.toLong())
+            else
+                tripService.byCarId(id)
 }
