@@ -68,7 +68,7 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     compile('com.auth0:java-jwt:3.3.0')
     compile 'com.github.scoutant:polyline-decoder:b32557f'
-
+    compile 'io.micrometer:micrometer-registry-prometheus:latest.release'
 }
 
 dependencyManagement {
