@@ -1,6 +1,6 @@
 package com.s63d.ertripservice.clients
 
-import com.s63d.ertripservice.domain.SimpleVehicle
+import com.s63d.ertripservice.domain.db.SimpleVehicle
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

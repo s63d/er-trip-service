@@ -1,6 +1,6 @@
 package com.s63d.ertripservice.repositories
 
-import com.s63d.ertripservice.domain.Trip
+import com.s63d.ertripservice.domain.db.Trip
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 

@@ -1,4 +1,4 @@
-package com.s63d.ertripservice.domain
+package com.s63d.ertripservice.domain.db
 
 import it.rambow.master.javautils.Track
 import javax.persistence.Entity
