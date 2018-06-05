@@ -1,9 +1,9 @@
 package com.s63d.ertripservice.services
 
 import com.s63d.ertripservice.clients.VehicleClient
-import com.s63d.ertripservice.domain.CarTracker
-import com.s63d.ertripservice.domain.Trip
-import com.s63d.ertripservice.domain.TripResponse
+import com.s63d.ertripservice.domain.db.CarTracker
+import com.s63d.ertripservice.domain.db.Trip
+import com.s63d.ertripservice.domain.db.TripResponse
 import com.s63d.ertripservice.repositories.TripRepository
 import org.springframework.stereotype.Service
 
