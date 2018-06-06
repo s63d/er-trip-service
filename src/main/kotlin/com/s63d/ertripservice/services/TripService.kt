@@ -14,7 +14,8 @@ class TripService(private val tripRepository: TripRepository, private val vehicl
 
     fun createNew(carTrackerId: String) : Trip {
         val trip = Trip(CarTracker(carTrackerId))
-        return tripRepository.save(trip)
+        //println(trip.carTracker.carTrackerId)
+        return tripRepository.save(trip).also(::println)
     }
 
     fun byCarTracker(trackerId: String?, pageable: Pageable = Pageable.unpaged()) = tripRepository.findByCarTrackerId(trackerId, pageable).map { TripResponse(it) }
