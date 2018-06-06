@@ -1,11 +1,13 @@
 package com.s63d.ertripservice.repositories
 
 import com.s63d.ertripservice.domain.db.Trip
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 
 interface TripRepository : CrudRepository<Trip, Long> {
 
     @Query("SELECT t FROM Trip t WHERE t.carTracker.carTrackerId = ?1")
-    fun findByCarTrackerId(carTrackerId: String) : List<Trip>
+    fun findByCarTrackerId(carTrackerId: String?, pageable: Pageable) : Page<Trip>
 }
