@@ -14,4 +14,8 @@ class TripController(private val tripService: TripService) {
     @GetMapping
     fun getTripsForVehicle(@RequestParam vehicleId: String, principal: Principal) = tripService.byVehicleId(vehicleId)
 
+    @PostMapping
+    @RequestMapping("{id}/finished")
+    fun finishTrip(@PathVariable id: Long) =  tripService.finishTrip(id)
+
 }
