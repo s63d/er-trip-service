@@ -25,7 +25,7 @@ class SecurityConfig(private val userDetailsService: UserDetailsService) : WebSe
                 .authorizeRequests()
                 .antMatchers("/v2/api-docs","/swagger-resources","/swagger-resources/**", "/swagger-ui.html", "/webjars/**").permitAll()
                 .antMatchers("/actuator/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/api/trips").permitAll()
+                .antMatchers(HttpMethod.POST,"/api/trips", "/api/trips/**/finished").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterAfter(JwtAuthorizationFilter(authenticationManager(), userDetailsService), BasicAuthenticationFilter::class.java)
