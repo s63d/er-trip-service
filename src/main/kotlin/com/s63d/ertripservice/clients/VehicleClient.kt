@@ -14,4 +14,5 @@ interface VehicleClient {
 
     @GetMapping("{license}")
     fun getById(@PathVariable license: String, @RequestHeader(HttpHeaders.AUTHORIZATION) auth: String) : SimpleVehicle?
+
 }
